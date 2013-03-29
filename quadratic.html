@@ -1,0 +1,29 @@
+<html>
+<!-- Joey Rowell -->
+<head>
+<script type = "text/javascript">
+
+function quadratic(a, b, c){
+	var d = b*b-4*a*c;
+	document.write("Discrim is " +d+ "<br>"  );
+	if (d < 0){
+		document.write("No real roots" + "<br>" );
+	}else if (d == 0){
+		document.write("Quadratic has one root, which is " + -b/(2 * a));		
+	}else{
+		root1 = (-b + Math.sqrt(d)) / (2 * a);
+		root2 = (-b -Math.sqrt(d)) / (2 * a);
+		document.write("Quadratic has two real roots which are: " +root1+ "and " + root2 );
+	}
+	}
+</script>
+</head>
+<body>
+<script>
+var a = window.prompt("What is A? ");
+var b = window.prompt("What is B? ");
+var c = window.prompt("What is c? ");
+quadratic(a,b,c);
+</script>
+</body>
+</html>
