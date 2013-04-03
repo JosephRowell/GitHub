@@ -1,14 +1,25 @@
-## CSSTidy v. 1.0 Written in Python 3.2
-## Use this with the CSS file that I have included
-## What this does is it creates a favorable output in IDLE
-## when you run this. It adds a linebreak after every '}' character.
+## CSSTidy v. 1.2 Written in Python 3.2
+## When you run this, you can choose a file (most likely a CSS file)
+## It also works for .txt files if you happen to have a lot of '}' characters
+## It doesn't work for .docx files, but that probably shouldn't be a problem.
+## when you run this. It adds a linebreak after every '}' character. 
+## If you are using Notepad++ for example, if you have a CSS file
+## already open, after you run this a dialog box will come up and ask if you
+## want to reload. Click 'Yes'
+
+from tkinter import *
+from tkinter.filedialog import askopenfilename
 
 def tidy():
-    f = open('css_25c284e666a0131ff03aede0585577c8.css', 'r+')
-    b = '}' + '\n'
+    root = Tk()
+    root.withdraw()
+    cssfile = askopenfilename(parent=root)
+    f = open(cssfile, 'r+')
+    NLRbrak = '}' + '\n'
     contents = f.read()
-    print (contents, "\n")
-    newcontents = contents.replace('}', b)
-    print (newcontents)
+    newcontents = contents.replace('}', NLRbrak)
+    f.seek(0)
+    f.write(newcontents)
+    f.truncate()
     f.close()
 tidy()
