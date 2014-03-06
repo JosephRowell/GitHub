@@ -1,11 +1,18 @@
 ## CSSTidy v. 1.2 Written in Python 3.2
-## When you run this, you can choose a file (most likely a CSS file)
-## It also works for .txt files if you happen to have a lot of '}' characters
-## It doesn't work for .docx files, but that probably shouldn't be a problem.
-## when you run this. It adds a linebreak after every '}' character. 
-## If you are using Notepad++ for example, if you have a CSS file
-## already open, after you run this a dialog box will come up and ask if you
-## want to reload. Click 'Yes'
+
+
+'''
+When you run this, you can choose a file (most likely a CSS file)
+It also works for .txt files if you happen to have a lot of '}' characters
+It doesn't work for .docx files, but that probably shouldn't be a problem.
+when you run this. It adds a linebreak after every '}' character. 
+If you are using Notepad++ for example, if you have a CSS file
+already open, after you run this a dialog box will come up and ask if you
+want to reload. Click 'Yes'
+
+You need tkinter for this to work.
+
+'''
 
 from tkinter import *
 from tkinter.filedialog import askopenfilename
